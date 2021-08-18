@@ -1,0 +1,120 @@
+
+:root
+{
+    --main-radius:5px;
+    --main-padding:5px;
+    --primary: rgb(121, 26, 165) ;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.container
+{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr ;
+    grid-template-areas:"nav nav nav nav"
+                        "sidebar main main main"
+                        "sidebar content1 content2 content3"
+                        "sidebar footer footer footer";
+    grid-gap: 0.2rem;
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 25px;
+    color:rgb(61, 57, 57);
+    text-align: center;
+    height: 100vh;
+}
+
+
+.container
+{
+    background: rgb(235, 235, 235);
+}
+.nav
+{
+    background: rgb(204, 0, 0);
+    grid-area: nav;
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+    
+}
+.main
+{
+    background: rgb(217, 255, 0);
+    grid-area: main;
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sidebar
+{
+    background: rgb(0, 255, 34);
+    grid-area: sidebar;
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+
+}
+#content1
+{
+    background: rgb(0, 255, 213);
+    grid-area: content1;
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+
+}
+#content2
+{
+    background: rgb(0, 110, 255);
+    grid-area: content2;
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+
+}
+#content3
+{
+    background: rgb(111, 0, 255);
+    grid-area: content3;
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+
+}
+.footer
+{
+    background: rgb(255, 0, 157);
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    border-radius: var(--main-radius);
+}
+
+@media only screen and (max-width:550px)
+{
+
+    .container
+    {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.2fr  4fr 1.5fr 1.5fr 1.5fr 0.8fr ;
+        grid-template-areas: 
+        "nav"
+        "sidebar "
+        "main"
+        "content1" 
+        "content2" 
+        "content3"
+        "footer"
+        ;
+        grid-gap: 0.2rem;
+    }
+}
